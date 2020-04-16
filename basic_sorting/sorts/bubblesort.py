@@ -7,7 +7,7 @@ def bubblesort(list, descending=False):
 
     Selection sort has a time complexity of O(n^2), but it it performs well on lists that are
     substantially sorted, meaning they have a small number of changes required.
-    For more information, check out wikipedia: https://en.wikipedia.org/wiki/Selection_sort
+    For more information, check out wikipedia: https://en.wikipedia.org/wiki/Bubble_sort
     """
     unsorted_numbers = len(list)
 
