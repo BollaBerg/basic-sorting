@@ -2,7 +2,10 @@ def selectionsort(list, descending=False):
     """
     Takes in a list as an argument, and sorts it using a "Selection Sort"-algorithm.
 
-    The list can be any length and contain any number of elements, as long as they have a 
+    Has the following flags:
+        - descending: Set True if sorting should be high-to-low. Default=False
+
+    The list can be any length and contain any type of element, as long as they have a 
     defined "__lt__" (<)-operator.
 
     Selection sort has a time complexity of O(n^2), but a maximum of n-1 swaps makes it viable if

@@ -2,7 +2,10 @@ def bubblesort(list, descending=False):
     """
     Takes in a list as an argument, and sorts it using a "Bubble Sort"-algorithm.
 
-    The list can be any length and contain any number of elements, as long as they have a 
+    Has the following flags:
+        - descending: Set True if sorting should be high-to-low. Default=False
+
+    The list can be any length and contain any type of element, as long as they have a 
     defined "__lt__" (<)-operator.
 
     Selection sort has a time complexity of O(n^2), but it it performs well on lists that are
