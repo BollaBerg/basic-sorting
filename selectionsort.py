@@ -3,14 +3,17 @@ def selectionsort(list):
     Takes in a list as an argument, and sorts it using a "Selection Sort"-algorithm.
 
     The list can be any length and contain any number of elements, as long as they have a 
-    defined "__lt__" (<)-operator
+    defined "__lt__" (<)-operator.
+
+    Selection sort has a time complexity of O(n^2), but a maximum of n-1 swaps makes it viable if
+    swapping is expensive. For more information, check out wikipedia: https://en.wikipedia.org/wiki/Selection_sort
     """
     length = len(list)
 
     for i in range(length):
         min_element_index = i
 
-        for j in range (i, length):
+        for j in range (i+1, length):
             if list[j] < list[min_element_index]:
                 min_element_index = j
         

@@ -28,6 +28,8 @@ def _create_list_of_letters(n):
     
     return list
 
+
+
 class TestSelectionsort(unittest.TestCase):
     def test_selectionsort_on_integers(self):
         list = _create_list_of_integers(25)
