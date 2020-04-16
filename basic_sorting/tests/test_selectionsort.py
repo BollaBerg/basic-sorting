@@ -1,7 +1,9 @@
-from selectionsort import selectionsort
 import random
 import string
 import unittest
+
+# Import modules to test
+from basic_sorting.sorts.selectionsort import selectionsort
 
 def _create_list_of_integers(n):
     """Create a list of n integers."""
