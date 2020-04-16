@@ -2,8 +2,25 @@ def insertionsort(list, descending=False):
     """
     Takes in a list as an argument, and sorts it using an "Insertion Sort"-algorithm.
 
-    Has the following flags:
-        - descending: Set True if sorting should be high-to-low. Default=False
+    ---
+
+    Args: 
+
+         - list (list): The list to be sorted
+         - descending (bool): Set true if the list be sorted high-to-low. Default=False
+
+
+    Raises:
+
+         - TypeError: If the elements can't be compared using __lt__ (<)
+
+
+    Returns:
+
+         - list (list): The sorted list
+        
+
+    ---
 
     The list can be any length and contain any type of element, as long as they have a 
     defined "__lt__" (<)-operator.

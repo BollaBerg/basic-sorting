@@ -4,9 +4,21 @@ def mergesort(list, descending=False):
 
     ---
 
-    Has the following flags:
+    Args: 
 
-        - descending: Set True if sorting should be high-to-low. Default=False
+         - list (list): The list to be sorted
+         - descending (bool): Set true if the list be sorted high-to-low. Default=False
+
+
+    Raises:
+
+         - TypeError: If the elements can't be compared using __lt__ (<)
+
+
+    Returns:
+
+         - list (list): The sorted list
+        
 
     ---
 
