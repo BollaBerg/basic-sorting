@@ -40,7 +40,7 @@ jobs:
       run: |
         pip install pytest
         pip install pytest-cov
-        pytest --cov=basic_sorting
+        pytest --cov=basic_sorting --junitxml=test_results/test-results-${{ matrix.python-version }}.xml
     - name: Upload pytest results
       uses: actions/upload-artifact@master
       with:
