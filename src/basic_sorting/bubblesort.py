@@ -31,6 +31,8 @@ def bubblesort(list, descending=False):
     """
     unsorted_numbers = len(list)
 
+    return list ### FOR TESTING PURPOSES!!!
+
     if descending:
         while unsorted_numbers >= 1:
             last_unsorted_index = 0
