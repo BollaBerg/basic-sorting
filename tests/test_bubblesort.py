@@ -1,5 +1,5 @@
 import random
-import unittest
+import pytest
 
 # Import modules to test
 from basic_sorting.bubblesort import bubblesort
@@ -22,37 +22,38 @@ def _create_list_of_floats(n):
 
 
 
-class TestBubblesort(unittest.TestCase):
+class TestBubblesort:
     def test_bubblesort__on_integers(self):
         list = _create_list_of_integers(25)
         list_copy = list[:]
-        self.assertEqual(bubblesort(list), sorted(list_copy))
+        assert bubblesort(list) == sorted(list_copy)
 
     def test_bubblesort__on_integers_descending(self):
         list = _create_list_of_integers(25)
         list_copy = list[:]
-        self.assertEqual(bubblesort(list, descending=True), sorted(list_copy, reverse=True))
+        assert bubblesort(list, descending=True) == sorted(list_copy, reverse=True)
 
     def test_bubblesort__on_empty_list(self):
-        self.assertEqual(bubblesort([]), [])
+        assert bubblesort([]) == []
 
     def test_bubblesort__on_empty_list_descending(self):
-        self.assertEqual(bubblesort([], descending=True), [])
+        assert bubblesort([], descending=True) == []
 
     def test_bubblesort__on_single_float(self):
         list = _create_list_of_floats(1)
         list_copy = list[:]
-        self.assertEqual(bubblesort(list), sorted(list_copy))
+        assert bubblesort(list) == sorted(list_copy)
 
     def test_bubblesort__on_single_float_descending(self):
         list = _create_list_of_floats(1)
         list_copy = list[:]
-        self.assertEqual(bubblesort(list, descending=True), sorted(list_copy, reverse=True))
+        assert bubblesort(list, descending=True) == sorted(list_copy, reverse=True)
 
     def test_bubblesort__error(self):
         list = [1, 4, 5.77, 2, "a"]
-        self.assertRaises(TypeError, bubblesort, list)
+        with pytest.raises(TypeError):
+            bubblesort(list)
 
 
 if __name__ == "__main__":
-    unittest.main(verbosity=2)
+    pytest.main(["--verbose", __file__])
