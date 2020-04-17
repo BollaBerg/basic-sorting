@@ -3,7 +3,7 @@ import string
 import unittest
 
 # Import modules to test
-from basic_sorting.sorts.insertionsort import insertionsort
+from basic_sorting.insertionsort import insertionsort
 
 def _create_list_of_integers(n):
     """Create a list of n integers."""
