@@ -1,0 +1,4 @@
+########## Requirements for developing basic_sorting ##########
+
+##### To run tests #####
+pytest==5.4.1

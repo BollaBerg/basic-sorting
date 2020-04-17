@@ -27,8 +27,7 @@ pip install -e .
 
 (For more information about this process, check out [this StackOverflow-comment](https://stackoverflow.com/questions/6323860/sibling-package-imports/50193944#50193944), which is where I learnt it)
 
-~~I currently have no other dependencies, and I am aiming to not have in the future either. If I, however, DO end up having any, make sure to install them from `requirements.txt`:~~
-THIS IS NOT NEEDED AS OF RIGHT NOW!
+Install modules required for developing:
 ```bash
 pip install -r requirements.txt
 ```
