@@ -1,4 +1,9 @@
 # basic_sorting
+![Build](https://github.com/BollaBerg/basic_sorting/workflows/Build/badge.svg)
+![Test basic_sorting](https://github.com/BollaBerg/basic_sorting/workflows/Test%20basic_sorting/badge.svg)
+[![codecov](https://codecov.io/gh/BollaBerg/basic_sorting/branch/master/graph/badge.svg)](https://codecov.io/gh/BollaBerg/basic_sorting)
+
+
 A repo of basic sorting algorithms implemented in Python.
 
 This is mostly just to keep myself busy, while practicing testing, proper docstringing, pip-modularization, etc. It probably won't see any real world use, as all algorithms already have been implemented in Python by people way smarter than I am!
