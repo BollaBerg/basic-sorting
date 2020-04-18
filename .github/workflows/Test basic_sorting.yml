@@ -40,3 +40,4 @@ jobs:
       run: |
         pip install codecov
         codecov
+        bash <(curl -s https://codecov.io/bash)
