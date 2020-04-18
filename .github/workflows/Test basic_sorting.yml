@@ -1,16 +1,12 @@
 # This workflow will install Python dependencies, run tests and lint with a variety of Python versions
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Test all
+name: Test basic_sorting
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: push
 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
     strategy:
@@ -38,15 +34,9 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pip install pytest
-        pytest
-    # - name: Upload pytest results
-    #   uses: actions/upload-artifact@master
-    #   with:
-    #     name: pytest-results-${{ matrix.python-version }}
-    #     path: test_results/test-results-${{ matrix.python-version }}.xml
-    #   if: always()
-    # - name: Send coverage to Coveralls
-    #   uses: coverallsapp/github-action@master
-    #   with:
-    #     github-token: ${{ secrets.GITHUB_TOKEN }}
+        pip install pytest pytest-cov
+        pytest --cov=./
+    - name: Upload to codecov
+      run: |
+        pip install codecov
+        codecov
